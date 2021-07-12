@@ -7,4 +7,12 @@
 
 def handtodice(hand):
 	# your code goes here
-	pass
+	#n=int(input())
+	# x is for extraction of first digit
+	#y is for extracting second digit
+	#z is for extracting thrid digit
+	x=(hand//100)
+	temp=hand//10
+	y=(temp%10)
+	z=(hand%10)
+	return x, y, z
