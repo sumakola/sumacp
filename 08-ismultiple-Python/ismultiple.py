@@ -6,11 +6,13 @@
 
 
 def fun_ismultiple(m, n):
-#to find out the multiple
+#to find out the whether a number is multiple or not
 	if(m==0):
 		return True
+	#throws out an error, number division by zero
 	elif(n==0):
 		return False
+	#factor or not
 	elif(m%n==0):
 		return True
 	else:
