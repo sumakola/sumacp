@@ -12,4 +12,16 @@
 
 def dicetoorderedhand(a, b, c):
 	# your code goes here
-	pass
+	#123=100+20+3=(1*100)+(2*10)+(3*1)
+	#this is for the hundreds digit
+	x=max(a,b,c)
+	digitHuns=100*x
+	#this is for the last digit
+	z=min(a,b,c)
+	digitOnes=z*1
+	#this is  for the tens digit
+	y=a+b+c-x-z
+	digitTens=10*y
+	return digitHuns+digitTens+digitOnes
+	
+
