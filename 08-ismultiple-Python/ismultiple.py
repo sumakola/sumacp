@@ -6,6 +6,7 @@
 
 
 def fun_ismultiple(m, n):
+#to find out the multiple
 	if(m==0):
 		return True
 	elif(n==0):
@@ -13,4 +14,4 @@ def fun_ismultiple(m, n):
 	elif(m%n==0):
 		return True
 	else:
-		return False # replace with your solution
+		return False
