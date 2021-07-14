@@ -6,6 +6,7 @@
 def removeduplicate(text):
 	# Your code goes here
 	s = ""
+	#looping over the elements and adding the number into a new string
 	for i in text:
 		if i not in s:
 			s += i
