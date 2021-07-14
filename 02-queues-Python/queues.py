@@ -7,12 +7,13 @@ Make sure you pass the test cases too!"""
 class Queue:
     def __init__(self, head=None):
         self.storage = [head]
-
+    #queues follow the FIFO principle
+    #adding the element at the top 
     def enqueue(self, new_element):
-        pass
-
+        self.storage.append(new_element)
+    #peek is used to return top element without deleting from the queue
     def peek(self):
-        pass 
-
+        return self.storage[0]  
+    #removes the element from the head of the queue
     def dequeue(self):
-        pass
+        return self.storage.pop(0)  
