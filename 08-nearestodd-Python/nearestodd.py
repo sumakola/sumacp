@@ -6,7 +6,9 @@
 
 import math
 def fun_nearestodd(n):
+
 	nOdd=math.ceil(n)
+#if it is an odd number, minus it by one for getting odd no
 	if(nOdd%2==0):
 		return nOdd-1
 	return nOdd
