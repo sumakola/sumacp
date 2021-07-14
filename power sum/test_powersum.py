@@ -5,7 +5,7 @@ import sys
 sys.path.append(os.getcwd())
 
 
-@pytest.mark.parametrize('n', 'k', 'check' [
+@pytest.mark.parametrize('n, k, check', [
     (3, 4, 98),
     (2, -1, 0),
     (1, 0, 1),

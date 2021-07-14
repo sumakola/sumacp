@@ -22,12 +22,14 @@
 # If n is negative, return 0. Similarly, if k is negative, 
 # return 0.
 
-def powerSum(n, k):
+def powersum(n, k):
     sum = 0
+    #according to the question
+    if(n<0 or k<0):
+        return 0
+    #power sum, iterating thro all n nos, adding the powers of digits
     for i in range(1, n + 1, 1):
-         
         sum += pow(i, k)
-
     return sum
 # Write your own test cases here...
 
