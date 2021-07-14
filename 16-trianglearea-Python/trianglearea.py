@@ -6,4 +6,7 @@
 
 def trianglearea(s1, s2, s3):
 	# your code goes here
-	pass
+	#by heron's formula
+	semiPer=float((s1+s2+s3)/2)
+	areaOfTriangle=float((semiPer*(semiPer-s1)*(semiPer-s2)*(semiPer-s3))**0.5)
+	return areaOfTriangle
