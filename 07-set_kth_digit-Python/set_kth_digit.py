@@ -7,5 +7,24 @@
 
 
 def fun_set_kth_digit(n, k, d):
-		return 0
+    flag = False
+    if(n < 0):
+        n = -n
+        flag = True
+    inc = 0
+    newNo = 0
+    while(inc<=k or n > 0):
+        r = n % 10
+        if inc == k:
+           newNo=newNo + (d * (10 ** inc))
+        else:
+           newNo =newNo + (r * (10 ** inc))
+        inc += 1
+        n = n // 10
+    
+    if flag:
+       newNo =-newNo
+    return (newNo)
+   
+
 
