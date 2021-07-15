@@ -15,7 +15,7 @@ def mostfrequentdigit(n):
 
 
 def digitcount(i , n):
-	#for count of digits
+	#for count of digits of the given number
     count = 0
     while(n > 0):
         a = n % 10
