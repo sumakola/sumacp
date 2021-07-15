@@ -6,6 +6,8 @@ Think about this while you're implementing:
 why is it easier to add an "insert_first"
 function than just use "append"?"""
 
+#reference from https://jmlb.github.io/coding/2016/12/15/stacks/
+
 class Element(object):
     def __init__(self, value):
         self.value = value
