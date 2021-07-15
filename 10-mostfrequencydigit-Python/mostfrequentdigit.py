@@ -5,22 +5,22 @@
 
 def mostfrequentdigit(n):
 	#for frequency of the digits
-    digit = 0
-    frequency = 0
+    mostFreqdigit = 0
+    freqOcc= 0
     for i in range(0 , 10):
-        count = digitcount(i , n)
-        if(count > frequency):
-            frequency = count
-            digit = i            
-    return digit
+        count = digitsCount(i , n)
+        if(count > freqOcc):
+            freqOcc = count
+            mostFreqdigit = i            
+    return mostFreqdigit
 
 
-def digitcount(i , n):
+def digitsCount(i , n):
 	#for count of digits of the given number
     dCount = 0
     while(n > 0):
-        a = n % 10
-        if(a == i):
+        u= n % 10
+        if(u== i):
             dCount = dCount + 1
         n = n //10
     return dCount
