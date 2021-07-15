@@ -11,7 +11,20 @@
 
 
 def fun_applycaesarcipher(msg, shift):
-	return ""
+	cipherMsg=''
+	#looping through the msg
+	for char in msg:
+		#a=97 z=122
+		#ord converts string to integer
+		#chr converts the integer to a character string
+		if char.islower():
+			cipherMsg+=chr((ord(char)-97+shift)%26+97)
+		#A=65 Z=90
+		elif char.isupper():
+			cipherMsg+=chr((ord(char)-65+shift)%26+65)
+		else:
+			cipherMsg+=char
+	return cipherMsg
 
 
 
