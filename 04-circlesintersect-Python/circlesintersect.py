@@ -13,6 +13,7 @@ def fun_circlesintersect(x1, y1, r1, x2, y2, r2):
 	# your code goes here
 	#for the circles to intersect, their distance between the centres 
 	# must be equal to or less than the sum of their radii
+	#c1c2=r1+r2
 	centre=distance(x1,x2,y1,y2)
 	if (centre<=(float(r1+r2))):
 		return True
