@@ -34,13 +34,3 @@ def powersum(n, k):
 # Write your own test cases here...
 
 #print ("All test cases passed...")
-#write a function power  that takes 2 inputs a and b and return the result of a**b
-
-def power(a,b):
-    if a<0 or b<0:
-        return 0
-    else:
-        p=1
-        for i in range(1,b+1):
-            p=p*a
-        return p
