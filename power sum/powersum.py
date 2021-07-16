@@ -32,5 +32,3 @@ def powersum(n, k):
         sum += pow(i, k)
     return sum
 # Write your own test cases here...
-
-#print ("All test cases passed...")
