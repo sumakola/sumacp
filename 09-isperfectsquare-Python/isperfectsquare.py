@@ -4,7 +4,6 @@
 # m**2 == n), and False otherwise. Do not crash on non-ints nor on negative ints.
 import math
 def isperfectsquare(n):
-	# your code goes here
 	if type(n)==str:
 		#a=int(n)
 		if n.isdigit()==True:
