@@ -18,6 +18,16 @@ def powersum(n, k):
         return 0
     #power sum, iterating thro all n nos, adding the powers of digits
     for i in range(1, n + 1):
-        sum += pow(i, k)
+        sum += power(i, k)
     return sum
 # Write your own test cases here...
+
+def power(a,b):
+    if a<0 or b<0:
+        return 0
+    else:
+        p=1
+        for i in range(b):
+            p=p*a
+        return p
+
