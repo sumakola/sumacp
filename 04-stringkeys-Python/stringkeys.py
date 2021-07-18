@@ -24,6 +24,9 @@ class HashTable(object):
         """Helper function to calulate a
         hash value from a string."""
         # Your code goes here
-        pass
+        h=0
+        for char in string:
+            h+=ord(char)
+        return h % self.table
 
 
