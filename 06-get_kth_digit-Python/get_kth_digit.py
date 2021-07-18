@@ -4,6 +4,6 @@
 # if the kth digit is not present return 0 
 
 
-
+import math
 def fun_get_kth_digit(digit, k):
-	return 0
+	return  (int(abs(digit))//(math.pow(10,k))%10)
