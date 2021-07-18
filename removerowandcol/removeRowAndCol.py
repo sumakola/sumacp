@@ -23,6 +23,13 @@
 
 def removeRowAndCol(L, row, col):
     # Your code goes here...
-    pass
-
+    if (row==0 or col==0):
+        return None
+    elif(len(L)==0 or len(L)==1):
+        return None
+    else:
+        L.pop(row)
+        for i in (L):
+            del i[col]
+        return(L)
 # Write your own test cases.
