@@ -8,6 +8,18 @@
 
 import math
 def fun_find_int_roots(a, b, c):
-	return 0, 0
+	disc=int((b*b)-(4*a*c))
+	if disc>0:
+		rootOne=int(-b+math.sqrt(disc))/(2*a)
+		rootTwo=int(-b-math.sqrt(disc))/(2*a)
+		if (rootOne>rootTwo):
+			return (rootTwo, rootOne)
+		return (rootOne, rootTwo)
+	elif (disc==0):
+		rootOne=(-b/(2*a))
+		rootTwo=(-b/(2*a))
+		return (rootOne, rootTwo)
+	else:
+		return (0,0)
 
 
