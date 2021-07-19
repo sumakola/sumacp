@@ -17,7 +17,6 @@ class HashTable(object):
         else:
             self.table[a]=[string]
         return a
-
         
     def lookup(self, string):
         """Return the hash value if the
