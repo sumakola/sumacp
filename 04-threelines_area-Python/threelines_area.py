@@ -5,5 +5,7 @@
 import math
 
 def fun_threelines_area(a, b, c):
-	return 0
+	semiPer=float((a+b+c)/2)
+	areaOfTriangle=int((semiPer*(semiPer-a)*(semiPer-b)*(semiPer-c))**0.5)
+	return areaOfTriangle
 	
