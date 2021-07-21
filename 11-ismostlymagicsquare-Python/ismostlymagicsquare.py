@@ -13,37 +13,21 @@
 #   [ 2, 1]]
 # Each row and each column add to 3, but one diagonal adds to 2 and the other to 4.
 
-def ismostlymagicsquare(x):
-    if(rowsSum(x)==True and columnsSum(x)==True and diagonalsSum(x)==True):
-        return True
-    else:
-        return False
-		
-def rowsSum(x):
-    sumOfRows=sum(x[0])
-    for i in x:
-        value=sum(i)
-        if value==sumOfRows:
-            return True
-
-def diagonalsSum(x):
-    diagonalOne=0
-    diagonalTwo=0
-    for i in range(len(x)):
-        diagonalOne+=x[i][1]
-        diagonalTwo+=x[len(x)-i-1][len(x)-i-1]
-    if diagonalOne==diagonalTwo:
-        return True
-
-def columnsSum(x):
-    sumOfCols=0
-    for i in range(len(x)):
-        sumOfCols+=x[i][0]
-
-    for i in range(len(x)):
-        value=0
-        for j in range(len(x)):
-            value+=x[i][j]
-        if value==sumOfCols:
-            return True 
+def ismostlymagicsquare(a):
+		for i in range(len(a)):
+			sumRows=0
+			sumCols=0
+			for j in range(len(a[0])):
+				sumRows+=a[i][j]
+				sumCols+=a[j][i]
+				if sumCols!=sumRows:
+					return False
+				d1=0
+				d2=0
+				for i in range(len(a)):
+					d1+=a[i][i]
+					d2+=a[i][len(a)-i-1] 
+					if(d1!=d2):
+						return False
+					return True
 
