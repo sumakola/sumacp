@@ -11,18 +11,4 @@
 
 def shortenlongruns(L, k):
 	# Your code goes here
-	modList=[]
-	for i in L:
-		if len(modList)<=k:
-			modList.append(i)
-		else:
-			count=-1
-			print(modList)
-			while count>-k:
-				if i==modList[count]:
-					print(i,count)
-					count-=1
-				else:
-					modList.append(i)
-					break
-	return modList
+	pass
