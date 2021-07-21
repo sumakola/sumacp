@@ -4,26 +4,31 @@
 # A number n is said to be Powerful Number if for every prime factor p of it, p2 also divides it. 
 # For example:- 36 is a powerful number. It is divisible by both 3 and square of 3 i.e, 9.
 
-import math
-def isPowerfulNo(n):
-	
-	while (n % 2 == 0):
-		power = 0
-		while (n % 2 == 0):
-			n = n//2
-			power = power + 1
-		if (power == 1):
-			return False
-	
-	for factor in range(3, int(math.sqrt(n))+1, 2):
-		power = 0
-		while (n % factor == 0):
-			n = n//factor
-			power = power + 1
-		if (power == 1):
-			return False
-	return (n == 1)
+def getPrimeFactors(n):
+    i = 2
+    prime_factors = []
+    while i*i <= n:
+        if n%i == 0:
+            prime_factors.append(i)
+            n //= i
+        else:
+            i += 1
+    
+    if n>1:
+        prime_factors.append(n)
+    
+    return prime_factors
 
+def isPowerfulNo(n):
+    # get prime factors
+    prime_factors = getPrimeFactors(n)
+    
+    # filter to get unique prime factors
+    unique_prime_factors = set(prime_factors)
+    for p in unique_prime_factors:
+        if n % p != 0 or n % (p*p) != 0:
+            return False
+    return True
 
 def nthpowerfulnumber(n):
 	x=0
