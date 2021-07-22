@@ -10,6 +10,26 @@ elements are in a strictly increasing order.
 Return the index of value, or -1 if the value
 doesn't exist in the list."""
 
+
 def binary_search(input_array, value):
-    # Your code goes here
-    pass
+	
+		result = input_array
+		while len(input_array) >= 1:
+		
+			listSize= len(input_array)
+		
+			if (listSize % 2) != 0:
+				midElement = input_array[int(listSize/2)]
+			else:
+				midElement= input_array[int((listSize/2)-1)]
+		
+			if value == midElement:
+				return result.index(midElement)
+			elif value < midElement:
+				input_array = input_array[:(input_array.index(midElement))]
+			elif value > midElement:
+		   		input_array = input_array[(input_array.index(midElement)+1):]
+
+		return -1
+
+
