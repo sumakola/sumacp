@@ -14,6 +14,7 @@ sys.path.append(os.getcwd())
     ("J-Hope", 2),
     ("Jin", 1),
     ("Jimin", 2),
+    ("BTS",0)
 
     
 ])
