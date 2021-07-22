@@ -5,4 +5,3 @@ def vowelcount(n):
             count+=1
     return count
 
-print(vowelcount("Suma"))
