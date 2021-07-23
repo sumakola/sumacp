@@ -18,7 +18,7 @@
 
 def ishappynumber(n):
 	sum = 0
-	while(n!=0):
+	while(n>0):
 		sum += (n%10)**2
 		n//=10
 	if sum == 1:
@@ -28,10 +28,10 @@ def ishappynumber(n):
 	else:
 		return ishappynumber(sum)
 def nth_happy_number(n):
-	f = 1
-	g = 0
-	while(f<=abs(n)):
-		g+=1
-		if(ishappynumber(g)):
-			f+=1
-	return g
+	x = 1
+	y = 0
+	while(x<=abs(n)):
+		y+=1
+		if(ishappynumber(y)):
+			x+=1
+	return y
