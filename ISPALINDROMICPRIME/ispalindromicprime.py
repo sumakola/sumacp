@@ -16,7 +16,6 @@ def isPrime(n):
 	else:
 		return(False)
 
-
 def ispalindromicprime(n):
 	if (isPalindrome(n)):
 		if (isPrime(n)):
