@@ -19,13 +19,14 @@ class LinkedList(object):
         
     def append(self, new_element):
         # Your code goes here
+        #adding new elemnet at the head
         current = self.head
-        if self.head:
+        if self.head:#if head is present
             while current.next:
                 current = current.next
             current.next = new_element
         else:
-            self.head = new_element
+            self.head = new_element#if no is element is present, self.head-->new element
             
     def get_position(self, position):
         """Get an element from a particular position.
