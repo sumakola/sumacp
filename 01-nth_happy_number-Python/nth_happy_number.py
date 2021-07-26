@@ -13,16 +13,25 @@
 # assert(nth_happy_number(6) == 23)
 # assert(nth_happy_number(7) == 28)
 # assert(nth_happy_number(8) == 31)
+#lognbase10
+def findDigitSquaresum(n, sum = 0):
+	if(n>0):
+		sum+=(n%10)**2
+		n=n//10
+		return findDigitSquaresum(n, sum)
+	return sum
 
-
+# print (findDigitSquaresum(125))
+# assert(findDigitSquaresum(125) == 30)
+# assert(findDigitSquaresum(1) == 1)
+# assert(findDigitSquaresum(0) == 0)
+# assert(findDigitSquaresum(12) == 5)
+# print ("All test cases passed. :-)")
 
 def ishappynumber(n):
-	sum = 0
-	while(n>0):
-		sum += (n%10)**2
-		n//=10
+	sum = findDigitSquaresum(n)
 	if sum == 1:
-		return True
+			return True
 	elif sum<10:
 		return False
 	else:
@@ -35,3 +44,4 @@ def nth_happy_number(n):
 		if(ishappynumber(y)):
 			x+=1
 	return y
+
