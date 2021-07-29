@@ -10,7 +10,7 @@ def median(a):
     index = (b - 1) // 2
     if(b == 0):
         return None
-    if (b % 2 != 0):
+    elif (b % 2 != 0):
         return newA[index]
     else:
         return (newA[index] + newA[index + 1])/2.0
