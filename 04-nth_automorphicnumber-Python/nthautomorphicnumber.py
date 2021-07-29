@@ -6,12 +6,12 @@
 def isAutomorphicNum(n):
 
     Num = n
-    square = Num * Num
+    sq = Num * Num
     while (Num > 0):
-        if(Num % 10 != square % 10):
+        if(Num % 10 != sq % 10):
             return False
         Num = int(Num//10)
-        square = int(square//10)
+        sq = int(sq//10)
     return True
 
 
