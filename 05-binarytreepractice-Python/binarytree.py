@@ -39,6 +39,7 @@ class BinaryTree(object):
         """
         # Your code goes here
         if start is None:
-            print(start.value)
+            return
+        print(start.value)
         self.preorder_print(start.left)
         self.preorder_print(start.right)
