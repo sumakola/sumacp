@@ -20,12 +20,12 @@ def fun_recursion_onlyevendigits(l, finl=None, count=0):
         count += 1
         # we will call our helper fuction on every number to convert them into
         # numbers made of only even numbers
-        newNum = checkForEvens(l[0])
+        newNum = checkEvenDigits(l[0])
         finl.append(newNum)
         return fun_recursion_onlyevendigits(l[1:], finl, count)
 
 
-def checkForEvens(number, newNum=0, powers=1):
+def checkEvenDigits(number, newNum=0, powers=1):
     # base case checks if we have already loooped through the whole number
     digit = number % 10
     if number <= 0:
@@ -38,7 +38,7 @@ def checkForEvens(number, newNum=0, powers=1):
             number //= 10
             # strip down the number by 10
             powers *= 10
-            return checkForEvens(number, newNum, powers)
+            return checkEvenDigits(number, newNum, powers)
         else:
             number //= 10
-            return checkForEvens(number, newNum, powers)
+            return checkEvenDigits(number, newNum, powers)
