@@ -39,7 +39,7 @@ def areAnagrams(s1, s2):
 
 
 # write your test cases here...
-assert(areAnagrams())
-assert(areAnagrams())
-assert(areAnagrams())
+assert(areAnagrams("ABA", "aab") == True)
+assert(areAnagrams("SUMA", "amsu") == True)
+assert(areAnagrams("abc", "bcd") == False)
 print("All test cases passed....")
