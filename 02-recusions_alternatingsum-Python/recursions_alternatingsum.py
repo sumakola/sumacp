@@ -7,6 +7,7 @@
 
 
 
+#reference from cspp course
 def fun_recursions_alternatingsum(l):
 	if(len(l) == 0):
 		return 0
