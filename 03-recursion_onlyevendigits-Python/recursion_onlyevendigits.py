@@ -8,6 +8,7 @@
 # Also the function returns the empty list if the original list is empty.
 # Remember to not use strings. You may not use loops/iteration in this problem.
 
+#reference from cspp course
 
 def checkEvenDigits(number, newNum=0, powers=1):
     digit = number % 10
