@@ -1,3 +1,5 @@
+# reference from https://github.com/grantgasser/udacity-data-structures-algorithms/blob/master/binarytree.py
+
 class Node(object):
     def __init__(self, value):
         self.value = value
