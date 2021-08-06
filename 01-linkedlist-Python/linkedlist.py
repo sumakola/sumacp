@@ -8,26 +8,30 @@ particular value.
 Then, use "Test Run" and "Submit" to run the test cases
 at the bottom."""
 
+# reference from https://gist.github.com/halee9/c5afe8df00f64057c770b339f21eb2f1
+
+
 class Element(object):
     def __init__(self, value):
         self.value = value
         self.next = None
-        
+
+
 class LinkedList(object):
     def __init__(self, head=None):
         self.head = head
-        
+
     def append(self, new_element):
         # Your code goes here
-        #adding new elemnet at the head
+        # adding new elemnet at the head
         current = self.head
-        if self.head:#if head is present
+        if self.head:  # if head is present
             while current.next:
                 current = current.next
             current.next = new_element
         else:
-            self.head = new_element#if no is element is present, self.head-->new element
-            
+            self.head = new_element  # if no is element is present, self.head-->new element
+
     def get_position(self, position):
         """Get an element from a particular position.
         Assume the first position is "1".
@@ -43,8 +47,7 @@ class LinkedList(object):
             current = current.next
             counter += 1
         return None
-        
-    
+
     def insert(self, new_element, position):
         """Insert a new node at the given position.
         Assume the first position is "1".
@@ -64,8 +67,6 @@ class LinkedList(object):
             new_element.next = self.head
             self.head = new_element
 
-    
-    
     def delete(self, value):
         """Delete the first node with a given value."""
         # Your code goes here
