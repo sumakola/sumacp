@@ -3,6 +3,7 @@
 # whether the queen can attack the opponent or not. Note that the queen can attack in the same row, same column and
 # diagonally.
 
+# reference from cspp course
 def canqueenattack(qX, qY, oX, oY):
     # Your code goes here
     if(qX == oX):
