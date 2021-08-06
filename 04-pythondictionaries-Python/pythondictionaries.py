@@ -30,34 +30,35 @@ American City
 Asian City - Country
 Asian City - Country"""
 
+# REFERENCE FROM https://hackmd.io/@qhJ_4BzgRru-FNndYXQF2w/B187_MCKr
+
 
 def sortUSA():
     '''Return all the cities in the USA in alphabetical order'''
-    #sort the cities according to cities in USA
-    usaCity=locations['North America']['USA']
+    # sort the cities according to cities in USA
+    usaCity = locations['North America']['USA']
     usaCity.sort()
     return usaCity
-   
+
 
 def alphaAsia():
     '''Return all the cities in Asia continent in alphabetical order'''
-    #sort cities according in asia
-    locAsia=locations['Asia']
+    # sort cities according in asia
+    locAsia = locations['Asia']
     print(locAsia)
-    s=''    
-    asiaCity=[]   
-    for i in locAsia:        
-        s+=str(locAsia[i][0])+' - '+str(i)        
-        asiaCity.append(s)        
-        s=''    
-        asiaCity.sort()    
+    s = ''
+    asiaCity = []
+    for i in locAsia:
+        s += str(locAsia[i][0])+' - '+str(i)
+        asiaCity.append(s)
+        s = ''
+        asiaCity.sort()
     return asiaCity
-    
+
+
 # Note: Check for test cases to understand the output format.
 locations = {'North America': {'USA': ['Mountain View']}}
-locations['Asia']= {'China':['Shanghai']}
-locations['Africa']={'Egypt':['Cairo']}
-locations['Asia']['India']=['Bangalore']
+locations['Asia'] = {'China': ['Shanghai']}
+locations['Africa'] = {'Egypt': ['Cairo']}
+locations['Asia']['India'] = ['Bangalore']
 locations['North America']['USA'].append('Atlanta')
-
-
