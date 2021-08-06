@@ -2,6 +2,8 @@
 in a hash table, where keys are calculated
 using the first two letters of the string."""
 
+
+# reference from http://www.openbookproject.net/books/pythonds/SortSearch/Hashing.html
 class HashTable(object):
     def __init__(self):
         self.table = [""]*10000
@@ -9,21 +11,21 @@ class HashTable(object):
     def store(self, string):
         """Input a string that's stored in 
         the table."""
-        # Hash Value = (ASCII Value of First Letter * 100) + ASCII Value of Second Letter 
+        # Hash Value = (ASCII Value of First Letter * 100) + ASCII Value of Second Letter
         # Your code goes here
-        a=self.calculate_hash_value(string)
-        if(self.table[a]!=None):
-            self.table[a]=(string)
+        a = self.calculate_hash_value(string)
+        if(self.table[a] != None):
+            self.table[a] = (string)
         else:
-            self.table[a]=[string]
+            self.table[a] = [string]
         return a
-        
+
     def lookup(self, string):
         """Return the hash value if the
         string is already in the table.
         Return -1 otherwise."""
         # Your code goes here
-        a=self.calculate_hash_value(string)
+        a = self.calculate_hash_value(string)
         if(string in self.table[a]):
             return a
         return -1
@@ -32,7 +34,5 @@ class HashTable(object):
         """Helper function to calulate a
         hash value from a string."""
         # Your code goes here
-        hashValue=(ord(string[0])*100)+(ord(string[1]))
+        hashValue = (ord(string[0])*100)+(ord(string[1]))
         return hashValue
-
-
