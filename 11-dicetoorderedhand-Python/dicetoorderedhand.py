@@ -9,19 +9,18 @@
 # assert(dicetoorderedhand(6,5,6) == 665)
 # assert(dicetoorderedhand(2,2,2) == 222)
 
+# reference from https://github.com/Chiver/15-112-Fundamentals-of-Programming/blob/master/hw1_Version2.py
 
 def dicetoorderedhand(a, b, c):
-	# your code goes here
-	#123=100+20+3=(1*100)+(2*10)+(3*1)
-	#this is for the hundreds digit
-	x=max(a,b,c)
-	digitHuns=100*x
-	#this is for the last digit
-	z=min(a,b,c)
-	digitOnes=z*1
-	#this is  for the tens digit
-	y=a+b+c-x-z
-	digitTens=10*y
-	return digitHuns+digitTens+digitOnes
-	
-
+    # your code goes here
+    # 123=100+20+3=(1*100)+(2*10)+(3*1)
+    # this is for the hundreds digit
+    x = max(a, b, c)
+    digitHuns = 100*x
+    # this is for the last digit
+    z = min(a, b, c)
+    digitOnes = z*1
+    # this is  for the tens digit
+    y = a+b+c-x-z
+    digitTens = 10*y
+    return digitHuns+digitTens+digitOnes
