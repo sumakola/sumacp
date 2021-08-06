@@ -33,43 +33,51 @@
 # into a sorted hand.
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
 
+# REFERENCE FROM https://github.com/Chiver/15-112-Fundamentals-of-Programming/blob/master/hw1_Version2.py
+
 def handToDice(hand):
-	# your code goes here
-	#n=int(input())
-	# x is for extraction of first digit
-	#y is for extracting second digit
-	#z is for extracting thrid digit
-	x=(hand//100)
-	temp=hand//10
-	y=(temp%10)
-	z=(hand%10)
-	return x, y, z
+    # your code goes here
+    # n=int(input())
+    # x is for extraction of first digit
+    # y is for extracting second digit
+    # z is for extracting thrid digit
+    x = (hand//100)
+    temp = hand//10
+    y = (temp % 10)
+    z = (hand % 10)
+    return x, y, z
+
+
 def diceToOrderedHand(a, b, c):
-	#123=100+20+3=(1*100)+(2*10)+(3*1)
-	#this is for the hundreds digit
-	x=max(a,b,c)
-	digitHuns=100*x
-	#this is for the last digit
-	z=min(a,b,c)
-	digitOnes=z*1
-	#this is  for the tens digit
-	y=a+b+c-x-z
-	digitTens=10*y
-	return digitHuns+digitTens+digitOnes
+    # 123=100+20+3=(1*100)+(2*10)+(3*1)
+    # this is for the hundreds digit
+    x = max(a, b, c)
+    digitHuns = 100*x
+    # this is for the last digit
+    z = min(a, b, c)
+    digitOnes = z*1
+    # this is  for the tens digit
+    y = a+b+c-x-z
+    digitTens = 10*y
+    return digitHuns+digitTens+digitOnes
+
+
 def matchNum(hand):
-	#this is for checking whether numbers are equal or not
+    # this is for checking whether numbers are equal or not
     digitOne, digitTwo, digitThree = handToDice(hand)
     if digitOne == digitTwo == digitThree:
         return 3
-    elif digitOne != digitTwo!= digitThree:
+    elif digitOne != digitTwo != digitThree:
         return 1
     else:
         return 2
+
+
 def playstep2(hand, dice):
     getMatch = matchNum(hand)
 
     a, b, c = handToDice(hand)
-    orderedHand= diceToOrderedHand(a, b, c)
+    orderedHand = diceToOrderedHand(a, b, c)
     # Case one- when all the numbers are equal
     if getMatch == 3:
         return hand, dice
@@ -97,4 +105,3 @@ def playstep2(hand, dice):
         changedHand = diceToOrderedHand(t1, t2, t3)
 
         return changedHand, dice // 100
-
