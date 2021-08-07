@@ -18,6 +18,7 @@
 # Hint: Do not slice the list L, but rather adjust the indexes into L.
 
 
+# reference from binary search program
 def binarySearch(a, b, low, high, result=[]):
     mid = (low + high) // 2
     if low < high and a[mid] == b:
