@@ -6,6 +6,7 @@
 # computer graphics, where (0,0) is at the left-top corner of the screen, and while 
 # the x-coordinate goes up while you head right, the y-coordinate goes up while you 
 
+#reference from https://www.geeksforgeeks.org/find-two-rectangles-overlap/
 
 def fun_rectangle_overlap(left1, top1, width1, height1, left2, top2, width2, height2):
     condOne=((left2>left1) and (left2>left1+width1))
