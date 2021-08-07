@@ -10,6 +10,7 @@
 # However, they also are here specifically because they are just the right helper
 # functions to make nthHappyNumber(n) easier to write!
 
+# reference from geeksforgeeks
 def findDigitSquaresum(n, sum=0):
     if(n > 0):
         sum += (n % 10)**2
