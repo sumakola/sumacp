@@ -10,6 +10,7 @@
 # which could be quite handy here.
 # Hint: The time complexity can be achieved in Linear.
 
+# reference from cspp
 def areAnagrams(s1, s2):
     # Your code goes here...
 
