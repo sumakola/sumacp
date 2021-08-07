@@ -21,6 +21,8 @@ the function should return as follows
 }
 '''
 
+# reference from https://openbookproject.net/thinkcs/python/english3e/dictionaries.html
+
 
 def movie_awards(oscarResults):
     # Your code goes here...
