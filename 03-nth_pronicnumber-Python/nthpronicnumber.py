@@ -5,6 +5,7 @@
 
 # 12--> 3*4
 
+# reference from https://www.geeksforgeeks.org/check-given-number-pronic/
 def pronicnum(n):
     for i in range(1, n+1):
         if(i*(i+1) == n):
