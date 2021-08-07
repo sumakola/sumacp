@@ -4,6 +4,7 @@
 # sayHi(d1) # Hi, my name is Dot and I am 4 years old!
 # sayHi(d2) # Hi, my name is Elf and I am 3 years old!
 
+# reference from https://www.w3schools.com/python/python_classes.asp
 class SayHi(object):
 
     def __init__(self, name, age):
