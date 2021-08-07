@@ -20,6 +20,8 @@
 # inverseLookAndSay([(2,3),(1,8),(3,-10)]) == [3,3,8,-10,-10,-10]
 # inverseLookAndSay([(2,3),(1,8),(4,3)]) == [3,3,8,3,3,3,3])
 
+# reference from cspp
+
 def inverselookandsay(a):
     # Your code goes here
     result = []
