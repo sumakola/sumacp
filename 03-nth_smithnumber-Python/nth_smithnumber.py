@@ -7,31 +7,14 @@
 # so fun_nthsmithnumber(0) should return 4
 # so fun_nthsmithnumber(1) should return 22
 
-def isPrimeNo(num):
-    for i in range(2, num):
-        if (num % i) == 0:
+# reference from geeksforgeeks
+def isPrimeNo(n):
+    for i in range(2, n):
+        if (n % i) == 0:
             return False
         else:
             continue
     return True
-
-
-def get_prime_factors(n):
-    i = 2
-    sum = 0
-    prime_factors = []
-    while i*i <= n:
-        if n % i == 0:
-            sum += digitSum(i)
-            prime_factors.append(i)
-            n //= i
-        else:
-            i += 1
-
-    if n > 1:
-        prime_factors.append(n)
-        sum += digitSum(n)
-    return sum
 
 
 def digitSum(n):
@@ -41,13 +24,31 @@ def digitSum(n):
         n = int(n/10)
     return sum
 
+
+def calprimefactors(n):
+    i = 2
+    sum = 0
+    primeFactors = []
+    while i*i <= n:
+        if n % i == 0:
+            sum += digitSum(i)
+            primeFactors.append(i)
+            n //= i
+        else:
+            i += 1
+
+    if n > 1:
+        primeFactors.append(n)
+        sum += digitSum(n)
+    return sum
+
  # Function to check whether a number is a Smith Number or not
 
 
 def smithNombre(n):
     if(isPrimeNo(n)):
         return False
-    if(digitSum(n) == get_prime_factors(n)):
+    if(digitSum(n) == calprimefactors(n)):
         return True
     return False
 
